@@ -36,6 +36,13 @@ pipeline {
                     waitForQualityGate abortPipeline: "false", CredentialsId: "sonar-api" 
                 }
             }
-        }               
+        } 
+        stage('upload war file to nexus'){
+            steps{
+                script{
+                    nuxusArtifactUploader.....huge command generated in jenkins pipeline syntax with nexus artifact uploader, we can see the alignment in the screen shot
+                }
+            }
+        }              
     }
 }
