@@ -23,8 +23,17 @@ pipeline {
         }
         stage('statis code analysis') {
             steps {
-                withSonarqubeEnv(CredentialsId: "Sonar-api") {
+                script{
+                withSonarqubeEnv(CredentialsId: "sonar-api") {
                 sh 'mvn clean package sonar:sonar'
+                }
+                }
+            } 
+        }
+        stage('Quality Gate status') {
+            steps{
+                script{
+                    waitForQualityGate abortPipeline: "false", CredentialsId: "sonar-api" 
                 }
             }
         }               
