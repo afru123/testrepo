@@ -40,6 +40,8 @@ pipeline {
         stage('upload war file to nexus'){
             steps{
                 script{
+                    def readPomVersion = readMavenPom file: 'pom.xml'
+                    def nexusRepo = readMavenPom.version.endsWith('SNAPSHOT') ? "demoapp-snapshot" : "demoapp-release"
                     nuxusArtifactUploader.....huge command generated in jenkins pipeline syntax with nexus artifact uploader, we can see the alignment in the screen shot
                 }
             }
