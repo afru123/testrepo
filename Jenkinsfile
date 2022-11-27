@@ -45,6 +45,15 @@ pipeline {
                     nuxusArtifactUploader.....huge command generated in jenkins pipeline syntax with nexus artifact uploader, we can see the alignment in the screen shot
                 }
             }
+        }
+        stage('Docker image build') {
+            steps{
+                script{
+                    sh 'docker image build -t $JOB_NAME:v1.$BUILD.ID'
+                    sh 'docker image tag $JOB_NAME:v1.$BUILD.ID afru123/$JOB_NAME:v1.$BUILD.ID'
+                    sh 'docker image tag $JOB_NAME:v1.$BUILD.ID afru123/$JOB_NAME: latest'
+                }
+            }
         }              
     }
 }
