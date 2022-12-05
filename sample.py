@@ -15,3 +15,10 @@ print("List3 = ", List3)
 indexvalue = List2[2:6]
 print("The index values are ", indexvalue)
 
+a = 10
+b = 20
+if a > b:
+  print("a is greater than b")
+else
+  print("b is greater than a")
+  
