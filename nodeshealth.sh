@@ -28,5 +28,8 @@ ps -ef | grep "amazon"   # grep command is used to filter specific word/words.
 
 ps -ef | grep "amazon" awk -F" " '{print $2}'   # this awk command is helping in pulling out the specific column, here we got info of 2nd column.
 
+curl url # This command retreives the information from internet via url.
+# if there is any kind of error, mostly devops check logfile to find out, logfile is most saved somewhere so we can retreive it with: Curl url | grep Error
 
-
+# in python request module is used in place of curl command.
+wget # this command is also can be used, but it downloads the file and saving it.
