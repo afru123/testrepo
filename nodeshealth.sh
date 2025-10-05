@@ -19,4 +19,4 @@ free -g
 
 nproc
 
-
+ps -ef | grep "amazon"   # grep command is used to filter specific word/words.
