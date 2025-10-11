@@ -33,3 +33,11 @@ curl url # This command retreives the information from internet via url.
 
 # in python request module is used in place of curl command.
 wget # this command is also can be used, but it downloads the file and saving it.
+
+sudo su - # This command is switching you to root user but in organizations normally you do not have to use root user coz this is powerfull and deleting something by mistake can be disastrous.
+su abhishek # su means switch user, we can use this command to switch from one user to another.
+find / -name name of file # This is useful command of finding any file by name.
+
+trap "echo do not use the ctrl c" SIGINT  # this command traping the linux signals.
+
+
