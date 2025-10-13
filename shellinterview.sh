@@ -83,3 +83,6 @@ we can use sort command.
 
 # How will you manage logs of a system that generate huge log files everyday?
 logrotate is an efficient way to manage huge logs. we can use the command logrotate (gzip, zip).
+
+
+# In youtube free Devops course, day 8 is watched but could not get full understanding of the code, it is basically listing the users on github repositories, the code is copied as a list-users.sh, can be modified for actual project.
